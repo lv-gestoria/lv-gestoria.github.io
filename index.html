@@ -35,7 +35,7 @@
     position: relative;
     display: inline-block;
     width: 300px;
-    height: 200px;
+    height: 220px;
     margin-bottom: 10px;
     /* Ensure no clipping occurs on the edges */
     overflow: visible;
@@ -48,29 +48,38 @@
     font-size: 150px;
     color: #000000;
     position: absolute;
-    left: 40%;
+    left: 50%; /* Changed to 50% to stay centered in the wider box */
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
     line-height: 1;
 }
 
-/* The stylized 'V' - Elegant and Overlapping */
+/* The stylized 'V' - Fixed clipping */
 .logo-v {
     font-family: 'Great Vibes', cursive;
-    font-size: 100px;
+    font-size: 120px; /* Slightly larger to match original branding */
     position: absolute;
-    left: 40%;
-    top: 60%;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 55%;
+    transform: translate(-30%, -45%); /* Fine-tune the overlap here */
     z-index: 2;
-    line-height: 1;
-    /* Premium Gold Gradient */
+    line-height: 1.2; /* Increased line-height prevents vertical clipping */
+    
+    /* THE FIX: Padding + Margin combo forces the browser to show the full glyph */
+    padding-right: 50px; 
+    padding-bottom: 20px;
+    margin-right: -50px; 
+    
+    /* Gradient & Clip */
     background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.15));
+    
+    /* Shadow and rendering fixes */
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.15));
+    white-space: nowrap;
     overflow: visible;
 }
 
