@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LV Gestão e Assessoria | Residência no Paraguai</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -26,6 +29,44 @@
         .gold-accent { color: var(--gold); }
         .bg-gold { background-color: var(--gold); }
         .border-gold { border-color: var(--gold); }
+
+        .logo-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          font-size: 80px; /* Adjust size as needed */
+        }
+
+  /* The stylized 'L' */
+  .logo-l {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: #000000;
+    line-height: 1;
+  }
+
+  /* The stylized 'V' */
+  .logo-v {
+    font-family: 'Great Vibes', cursive;
+    position: absolute;
+    left: 0.4em; /* Overlaps the V onto the L */
+    top: 0.1em;
+    font-size: 1.1em;
+    
+    /* Gold Gradient Effect */
+    background: linear-gradient(to bottom, #d4af37 0%, #f9f295 45%, #b8860b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .business-name {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 18px;
+    margin-top: 10px;
+  }
         
         /* Smooth scrolling for language toggle */
         html { scroll-behavior: smooth; }
@@ -49,11 +90,20 @@
     </nav>
 
     <header class="pt-20 pb-10 text-center">
-        <div class="inline-block border border-black p-4 mb-4">
+        <div style="text-align: center;">
+          <div class="logo-container">
+            <span class="logo-l">L</span>
+            <span class="logo-v">V</span>
+         </div>
+         <div class="business-name">
+           Gestão e Assessoria
+         </div>
+       </div>
+       <!-- <div class="inline-block border border-black p-4 mb-4">
             <img src="villalba_logo.jpg">
-         <!--   <span class="serif text-4xl font-bold tracking-tighter">LV</span>  -->
+            <span class="serif text-4xl font-bold tracking-tighter">LV</span>  
         </div>
-        <h1 class="text-2xl tracking-[0.2em] uppercase font-light">Gestão e Assessoria</h1>
+        <h1 class="text-2xl tracking-[0.2em] uppercase font-light">Gestão e Assessoria</h1>  -->
     </header>
 
     <section class="max-w-4xl mx-auto px-6 py-16 text-center border-y border-gray-100">
@@ -89,11 +139,15 @@
                 <h3 class="text-xl mb-2">Gestão de Cartório</h3>
                 <div class="w-8 h-[1px] bg-gold mx-auto mt-4"></div>
             </div>
+            <div class="bg-black text-white p-8 rounded-sm text-center flex flex-col justify-center">
+                <p class="text-xs tracking-[0.3em] uppercase mb-4 opacity-70">Contact Us</p>
+                <a href="https://wa.me/595983509507?text=Olá!%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20e%20documentos%20no%20Paraguai." class="hover:text-amber-500 transition underline underline-offset-8">Solicitar Consultoria</a>
+            </div>
 
         </div>
     </section>
     <section class="max-w-3xl mx-auto px-6 py-12 text-center italic text-gray-600 border-t border-gray-100">
-        <p class="mb-6">"Contamos com uma rede de parceiros especializados para abertura de empresas (contabilidade) e assessoria jurídica."</p>
+        <p class="mb-6">Contamos com uma rede de parceiros especializados para abertura de empresas (contabilidade) e assessoria jurídica.</p>
     </section>
 
     <!-- Español -->
@@ -134,14 +188,13 @@
             </div>
             <div class="bg-black text-white p-8 rounded-sm text-center flex flex-col justify-center">
                 <p class="text-xs tracking-[0.3em] uppercase mb-4 opacity-70">Contact Us</p>
-                <a href="https://wa.me/595983509507" class="hover:text-amber-500 transition underline underline-offset-8">Solicitar Consultoria</a>
+                <a href="https://wa.me/595983509507?text=Olá!%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20e%20documentos%20no%20Paraguai." class="hover:text-amber-500 transition underline underline-offset-8">Solicitar Consultoria</a>
             </div>
         </div>
     </section>
 
     <section class="max-w-3xl mx-auto px-6 py-12 text-center italic text-gray-600 border-t border-gray-100">
-        <p class="mb-6">"Contamos com uma rede de parceiros especializados para abertura de empresas (contabilidade) e assessoria jurídica."</p>
-        <p>"Contamos con una red de aliados especializados para apertura de empresas (contabilidad) y asesoría jurídica."</p>
+        <p>Contamos con una red de aliados especializados para apertura de empresas (contabilidad) y asesoría jurídica.</p>
     </section>
 
     <footer class="bg-stone-50 py-20 px-6 border-t border-gray-200">
@@ -152,7 +205,7 @@
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 mb-12">
-                <a href="https://wa.me/595983509507" class="flex items-center group">
+                <a href="https://wa.me/595983509507?text=Olá!%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20e%20documentos%20no%20Paraguai." class="flex items-center group">
                     <span class="gold-accent mr-3 group-hover:scale-110 transition">WhatsApp</span>
                     <span class="text-sm">+595 983 509 507</span>
                 </a>
@@ -168,7 +221,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/595983509507" class="fixed bottom-8 right-8 bg-gold text-white p-4 rounded-full shadow-xl hover:bg-black transition-all z-50">
+    <a href="https://wa.me/595983509507?text=Olá!%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20e%20documentos%20no%20Paraguai." class="fixed bottom-8 right-8 bg-gold text-white p-4 rounded-full shadow-xl hover:bg-black transition-all z-50">
         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835l.398.236c1.162.687 2.51 1.05 3.899 1.051 4.79 0 8.686-3.896 8.688-8.688.001-2.323-.902-4.506-2.541-6.146s-3.824-2.541-6.147-2.541c-4.791 0-8.686 3.896-8.688 8.688-.001 1.517.391 2.997 1.135 4.296l.259.452-1.1 4.02 4.116-1.08z"/></svg>
     </a>
 
