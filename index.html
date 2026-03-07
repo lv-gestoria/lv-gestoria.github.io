@@ -11,37 +11,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-    --gold: #b59410;
-    --marble-white: #fdfdfd;
-}
-
-body {
-    font-family: 'Lato', sans-serif;
-    background-color: var(--marble-white);
-    margin: 0;
-    padding: 0;
-    /* Enhanced Marble Texture */
-    background-image: 
-        radial-gradient(circle at 20% 50%, rgba(220, 220, 220, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(210, 210, 210, 0.25) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(200, 200, 200, 0.2) 0%, transparent 30%),
-        linear-gradient(90deg, rgba(230,230,230,0.15) 1px, transparent 1px),
-        linear-gradient(rgba(230,230,230,0.15) 1px, transparent 1px);
-    background-size: 
-        600px 600px,
-        800px 800px,
-        400px 400px,
-        50px 50px,
-        50px 50px;
-    background-position: 0 0, 40px 60px, 130px 270px, 0 0, 0 0;
-}
+            --gold: #b59410;
+            --marble-white: #fdfdfd;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--marble-white);
+            /* Subtle Marble Texture via CSS Gradients */
+            background-image: 
+                linear-gradient(125deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%),
+                linear-gradient(45deg, rgba(200,200,200,0.1) 0%, rgba(255,255,255,0) 20%),
+                url('https://www.transparenttextures.com/patterns/white-diamond.png');
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-accent { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
 
 /* Container to hold the overlapping letters */
 .logo-wrapper {
     position: relative;
     display: inline-block;
-    width: 200px;
-    height: 180px;
+    width: 250px;
+    height: 200px;
     margin-bottom: 10px;
 }
 
