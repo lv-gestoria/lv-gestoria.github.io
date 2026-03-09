@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LV Gestão e Assessoria | Residência no Paraguai</title>
+    <meta name="description" content="Assessoria migratória de alto padrão no Paraguai. Obtenha sua residência permanente e cédula paraguaia com segurança e exclusividade.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --gold: #b59410;
@@ -17,7 +19,6 @@
         body {
             font-family: 'Lato', sans-serif;
             background-color: var(--marble-white);
-            /* Subtle Marble Texture via CSS Gradients */
             background-image: 
                 linear-gradient(125deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%),
                 linear-gradient(45deg, rgba(200,200,200,0.1) 0%, rgba(255,255,255,0) 20%),
@@ -30,113 +31,101 @@
         .bg-gold { background-color: var(--gold); }
         .border-gold { border-color: var(--gold); }
 
-        /* Container to hold the overlapping letters */
-.logo-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 300px;
-    height: 220px;
-    margin-bottom: 10px;
-    /* Ensure no clipping occurs on the edges */
-    overflow: visible;
-}
+        /* Logo Integration Logic */
+        .logo-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
 
-/* The stylized 'L' - Solid and Bold */
-.logo-l {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    font-size: 150px;
-    color: #000000;
-    position: absolute;
-    left: 50%; /* Changed to 50% to stay centered in the wider box */
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    line-height: 1;
-}
+        .logo-image-wrapper {
+            position: relative;
+            /* We define a width that accommodates the 'V' tail 
+               but we will align based on the 'L' center */
+            width: 100%;
+            max-width: 320px; 
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
 
-/* The stylized 'V' - Fixed clipping */
-.logo-v {
-    font-family: 'Great Vibes', cursive;
-    font-size: 120px; /* Slightly larger to match original branding */
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    transform: translate(-30%, -45%); /* Fine-tune the overlap here */
-    z-index: 2;
-    line-height: 1.4; /* Increased line-height prevents vertical clipping */
-    
-    /* THE FIX: Padding + Margin combo forces the browser to show the full glyph */
-    padding-right: 50px; 
-    padding-bottom: 20px;
-    margin-right: -50px; 
-    
-    /* Gradient & Clip */
-    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    
-    /* Shadow and rendering fixes */
-    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.15));
-    white-space: nowrap;
-    overflow: visible;
-}
+        .main-logo {
+            height: auto;
+            width: 100%;
+            /* Slight nudge to the right to account for the 'V' flourish 
+               ensuring the 'L' stem feels centered to the eye */
+            transform: translateX(5%); 
+            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.05));
+        }
 
-.business-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #333;
-    margin-top: 5px;
-}
-        
-        /* Smooth scrolling for language toggle */
+        .business-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.2rem, 5vw, 1.5rem);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            margin-top: 1rem;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #666;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .logo-image-wrapper { max-width: 240px; }
+            .business-title { letter-spacing: 0.15em; }
+        }
+
         html { scroll-behavior: smooth; }
         
         .service-card {
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(5px);
         }
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: var(--gold);
         }
     </style>
 </head>
 <body class="text-gray-900 leading-relaxed">
 
-    <nav class="fixed top-0 w-full z-50 py-4 px-6 flex justify-end space-x-4 text-xs tracking-widest font-bold">
+    <nav class="fixed top-0 w-full z-50 py-4 px-6 flex justify-end space-x-4 text-xs tracking-widest font-bold bg-white/80 backdrop-blur-sm">
         <a href="#pt" class="hover:text-amber-700 transition">PT</a>
         <span class="text-gray-300">|</span>
         <a href="#es" class="hover:text-amber-700 transition">ES</a>
     </nav>
 
-    <header class="pt-20 pb-10 text-center">
-        <div style="text-align: center; padding: 40px;">
-        <div class="logo-wrapper">
-            <span class="logo-l">L</span>
-            <span class="logo-v">V</span>
+    <header class="pt-24 pb-12">
+        <div class="logo-container" role="banner">
+            <div class="logo-image-wrapper">
+                <img src="villalba_logo-removebg.png" 
+                     alt="LV Gestão e Assessoria Logo" 
+                     class="main-logo"
+                     loading="eager">
+            </div>
+            <h1 class="business-title">Gestão e Assessoria</h1>
+            <p class="tagline">Assessoria Migratória de Alto Padrão</p>
         </div>
-        <h1 class="business-title">Gestão e Assessoria</h1>
-        <p style="font-family: 'Playfair Display', serif; font-style: italic; color: #888; letter-spacing: 1px; margin-top: 10px;">
-            Assessoria Migratória de Alto Padrão
-        </p>
-    </div>
-       <!-- <div class="inline-block border border-black p-4 mb-4">
-            <img src="villalba_logo.jpg">
-            <span class="serif text-4xl font-bold tracking-tighter">LV</span>  
-        </div>
-        <h1 class="text-2xl tracking-[0.2em] uppercase font-light">Gestão e Assessoria</h1>  -->
     </header>
 
-    <section class="max-w-4xl mx-auto px-6 py-16 text-center border-y border-gray-100">
-        <div id="pt" class="mb-12">
+    <section id="pt" class="max-w-4xl mx-auto px-6 py-16 text-center border-y border-gray-100">
+        <div class="mb-12">
             <h2 class="text-3xl md:text-5xl italic mb-4">Sua residência no Paraguai com exclusividade e segurança.</h2>
-            <p class="text-gray-500 uppercase tracking-widest text-sm">Assessoria Migratória de Alto Padrão</p>
+            <p class="text-gray-500 uppercase tracking-widest text-sm">Especialistas em Documentação Estrangeira</p>
         </div>
     </section>
+
     <section class="max-w-5xl mx-auto px-6 py-20">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
@@ -151,12 +140,12 @@
             </div>
             <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
                 <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-2">Registro de Extrangeiro & Interpol</h3>
+                <h3 class="text-xl mb-2">Registro de Estrangeiro & Interpol</h3>
                 <div class="w-8 h-[1px] bg-gold mx-auto mt-4"></div>
             </div>
             <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
                 <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-2">Antecedentes Judiciais & Radicação </h3>
+                <h3 class="text-xl mb-2">Antecedentes Judiciais & Radicação</h3>
                 <div class="w-8 h-[1px] bg-gold mx-auto mt-4"></div>
             </div>
             <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
@@ -165,20 +154,14 @@
                 <div class="w-8 h-[1px] bg-gold mx-auto mt-4"></div>
             </div>
             <div class="bg-black text-white p-8 rounded-sm text-center flex flex-col justify-center">
-                <p class="text-xs tracking-[0.3em] uppercase mb-4 opacity-70">Contact Us</p>
-                <a href="https://wa.me/595983509507?text=Olá!%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20e%20documentos%20no%20Paraguai." class="hover:text-amber-500 transition underline underline-offset-8">Solicitar Consultoria</a>
+                <p class="text-xs tracking-[0.3em] uppercase mb-4 opacity-70">Contato Direto</p>
+                <a href="https://wa.me/595983509507?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20no%20Paraguai." class="hover:text-amber-500 transition underline underline-offset-8">Solicitar Consultoria</a>
             </div>
-
         </div>
     </section>
-    <section class="max-w-3xl mx-auto px-6 py-12 text-center italic text-gray-600 border-t border-gray-100">
-        <p class="mb-6">Contamos com uma rede de parceiros especializados para abertura de empresas (contabilidade) e assessoria jurídica.</p>
-    </section>
 
-    <!-- Español -->
-
-    <section class="max-w-4xl mx-auto px-6 py-16 text-center border-y border-gray-100">
-        <div id="es" class="pt-4">
+    <section id="es" class="max-w-4xl mx-auto px-6 py-16 text-center border-y border-gray-100 bg-stone-50/50">
+        <div>
             <h2 class="text-3xl md:text-5xl italic mb-4">Su residencia en Paraguay con exclusividad y seguridad.</h2>
             <p class="text-gray-500 uppercase tracking-widest text-sm">Asesoría Migratoria de Alto Nivel</p>
         </div>
@@ -212,14 +195,10 @@
                 <div class="w-8 h-[1px] bg-gold mx-auto mt-4"></div>
             </div>
             <div class="bg-black text-white p-8 rounded-sm text-center flex flex-col justify-center">
-                <p class="text-xs tracking-[0.3em] uppercase mb-4 opacity-70">Contact Us</p>
-                <a href="https://wa.me/595983509507?text=Olá!%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20e%20documentos%20no%20Paraguai." class="hover:text-amber-500 transition underline underline-offset-8">Solicitar Consultoria</a>
+                <p class="text-xs tracking-[0.3em] uppercase mb-4 opacity-70">Contáctenos</p>
+                <a href="https://wa.me/595983509507" class="hover:text-amber-500 transition underline underline-offset-8">Solicitar Consultoría</a>
             </div>
         </div>
-    </section>
-
-    <section class="max-w-3xl mx-auto px-6 py-12 text-center italic text-gray-600 border-t border-gray-100">
-        <p>Contamos con una red de aliados especializados para apertura de empresas (contabilidad) y asesoría jurídica.</p>
     </section>
 
     <footer class="bg-stone-50 py-20 px-6 border-t border-gray-200">
@@ -230,12 +209,12 @@
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 mb-12">
-                <a href="https://wa.me/595983509507?text=Olá!%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20e%20documentos%20no%20Paraguai." class="flex items-center group">
-                    <span class="gold-accent mr-3 group-hover:scale-110 transition">WhatsApp</span>
+                <a href="https://wa.me/595983509507" class="flex items-center group">
+                    <span class="gold-accent mr-3 group-hover:scale-110 transition font-bold">WhatsApp</span>
                     <span class="text-sm">+595 983 509 507</span>
                 </a>
                 <a href="https://instagram.com/leonoravillalba_py" class="flex items-center group">
-                    <span class="gold-accent mr-3 group-hover:scale-110 transition">Instagram</span>
+                    <span class="gold-accent mr-3 group-hover:scale-110 transition font-bold">Instagram</span>
                     <span class="text-sm">@leonoravillalba_py</span>
                 </a>
             </div>
@@ -246,7 +225,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/595983509507?text=Olá!%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20e%20documentos%20no%20Paraguai." class="fixed bottom-8 right-8 bg-gold text-white p-4 rounded-full shadow-xl hover:bg-black transition-all z-50">
+    <a href="https://wa.me/595983509507" class="fixed bottom-8 right-8 bg-gold text-white p-4 rounded-full shadow-xl hover:bg-black hover:scale-110 transition-all z-50" aria-label="Chat on WhatsApp">
         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835l.398.236c1.162.687 2.51 1.05 3.899 1.051 4.79 0 8.686-3.896 8.688-8.688.001-2.323-.902-4.506-2.541-6.146s-3.824-2.541-6.147-2.541c-4.791 0-8.686 3.896-8.688 8.688-.001 1.517.391 2.997 1.135 4.296l.259.452-1.1 4.02 4.116-1.08z"/></svg>
     </a>
 
