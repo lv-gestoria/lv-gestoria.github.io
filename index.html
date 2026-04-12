@@ -1,303 +1,938 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LV Gestão e Assessoria | Residência no Paraguai</title>
-    <meta name="description" content="Assessoria migratória de alto padrão no Paraguai. Obtenha sua residência permanente e cédula paraguaia com segurança e exclusividade.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --gold: #b59410;
-            --marble-white: #fdfdfd;
-        }
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--marble-white);
-            background-image: 
-                linear-gradient(125deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%),
-                linear-gradient(45deg, rgba(200,200,200,0.1) 0%, rgba(255,255,255,0) 20%),
-                url('https://www.transparenttextures.com/patterns/white-diamond.png');
-        }
-        h1, h2, h3, .serif {
-            font-family: 'Playfair Display', serif;
-        }
-        .gold-accent { color: var(--gold); }
-        .bg-gold { background-color: var(--gold); }
-        .border-gold { border-color: var(--gold); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LV Gestão e Assessoria | Residência no Paraguai</title>
+  <meta name="description"
+    content="Assessoria migratória de alto padrão no Paraguai. Obtenha sua residência permanente e cédula paraguaia com segurança e exclusividade.">
+  <meta name="keywords"
+    content="Assessoria migratória, Residência no Paraguai, Cédula paraguaia, Cidadania paraguaia, LV Gestão e Assessoria">
 
-        /* Logo Integration Logic */
-        .logo-container {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
+  <meta property="og:title" content="LV Gestão e Assessoria - Residência no Paraguai">
+  <meta property="og:description"
+    content="Assessoria migratória de alto padrão no Paraguai. Obtenha sua residência permanente e cédula paraguaia com segurança e exclusividade.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://lv-gestoria.github.io/villalba_logo.jpg">
 
-        .logo-image-wrapper {
-            position: relative;
-            width: 100%;
-            max-width: 320px; 
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-        }
+  <link rel="icon" type="image/jpeg" href="https://lv-gestoria.github.io/villalba_logo.jpg">
 
-        .main-logo {
-            height: auto;
-            width: 100%;
-            transform: translateX(5%); 
-            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.05));
-        }
+  <link rel="alternate" href="https://lv-gestoria.github.io/#pt" hreflang="pt-BR">
+  <link rel="alternate" href="https://lv-gestoria.github.io/#es" hreflang="es">
+  <link rel="alternate" href="https://lv-gestoria.github.io/" hreflang="x-default">
 
-        .business-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.2rem, 5vw, 1.5rem);
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: #1a1a1a;
-            margin-top: 1rem;
-            font-weight: 700;
-        }
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap"
+    rel="stylesheet">
 
-        .tagline {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            color: #666;
-            letter-spacing: 0.05em;
-            margin-top: 0.5rem;
-        }
+  <style>
+    :root {
+      --gold: #b59410;
+      --marble-white: #fdfdfd;
+    }
 
-        @media (max-width: 640px) {
-            .logo-image-wrapper { max-width: 240px; }
-            .business-title { letter-spacing: 0.15em; }
-        }
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: var(--marble-white);
+      background-image:
+        linear-gradient(125deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%),
+        linear-gradient(45deg, rgba(200, 200, 200, 0.1) 0%, rgba(255, 255, 255, 0) 20%),
+        url('https://www.transparenttextures.com/patterns/white-diamond.png');
+    }
 
-        html { scroll-behavior: smooth; }
-        
-        .service-card {
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(5px);
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            border-color: var(--gold);
-        }
+    h1,
+    h2,
+    h3,
+    .serif {
+      font-family: 'Playfair Display', serif;
+    }
 
-        .benefit-item {
-            border-left: 3px solid var(--gold);
-            padding-left: 1.25rem;
+    .gold-accent {
+      color: var(--gold);
+    }
+
+    .bg-gold {
+      background-color: var(--gold);
+    }
+
+    .border-gold {
+      border-color: var(--gold);
+    }
+
+    /* Logo Integration Logic */
+    .logo-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .logo-image-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .main-logo {
+      height: auto;
+      width: 100%;
+      transform: translateX(5%);
+      filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.05));
+    }
+
+    .business-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 5vw, 1.5rem);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-top: 1rem;
+      font-weight: 700;
+    }
+
+    .tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #666;
+      letter-spacing: 0.05em;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .logo-image-wrapper {
+        max-width: 240px;
+      }
+
+      .business-title {
+        letter-spacing: 0.15em;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .service-card {
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(5px);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      border-color: var(--gold);
+    }
+
+    .benefit-item {
+      border-left: 3px solid var(--gold);
+      padding-left: 1.25rem;
+    }
+  </style>
+
+  <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "LV Gestão e Assessoria",
+        "image": "https://lv-gestoria.github.io/villalba_logo.jpg",
+        "@id": "https://lv-gestoria.github.io/",
+        "url": "https://lv-gestoria.github.io/",
+        "openingHours": "Lun-Vie 07:00-17:00",
+        "telephone": "+595983509507",
+        "priceRange": "R$6000",
+        "currency": ["PYG", "BRL"],
+        "sameAs": [
+          "https://www.instagram.com/leonoravillalba_py/"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Leonora Villalba",
+          "knowsLanguage": ["Spanish", "Guarani", "Portuguese"],
+          "jobTitle": "Especialista em Documentação Estrangeira",
+          "affiliation": {
+            "@type": "Organization",
+            "name": "LV Gestão e Assessoria"
+          },
+          "knowsAbout": [
+            "Documentación Estrangeira",
+            "Residência no Paraguai",
+            "Cédula paraguaia",
+            "Registro de Estrangeiro & Interpol",
+            "Antecedentes Judiciais & Radicação",
+            "Procuração Notarial e Gestão de Cartório"
+          ],
+          "sameAs": ["https://instagram.com/leonoravillalba_py"]
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -25.80352,
+          "longitude": -55.08963
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Hernandarias",
+          "addressLocality": "Santa Rita",
+          "addressRegion": "Alto Paraná",
+          "postalCode": "101305",
+          "addressCountry": "PY"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Ciudad del Este",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Alto Paraná"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Hernandarias",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Alto Paraná"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Presidente Franco",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Alto Paraná"
+            }
+          },
+          {
+            "@type": "State",
+            "name": "Alto Paraná",
+            "containedInPlace": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "Country",
+            "name": "Paraguay"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Serviços de Assessoria Migratória",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Admissão Permanente" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Cédula Paraguaia" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Registro de Estrangeiro & Interpol" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Antecedentes Judiciais & Radicação" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Procuração Notarial e Gestão de Cartório" }
+            }
+          ]
+        },
+        "mainEntityOfPage": {
+          "@type": "FAQPage",
+          "name": "FAQ - Perguntas Frequentes",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Brasileiro precisa de visto para entrar no Paraguai?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. Como o Brasil e o Paraguai são estados-membros do Mercosul, brasileiros podem entrar no país apenas com o RG original (em bom estado e com foto atualizada) ou Passaporte válido. Não é necessário visto de turista para estadias de até 90 dias."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual é o primeiro passo para quem quer morar legalmente?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Desde a nova lei de 2022, o proceso geralmente começa com a Residência Temporária (Acordo Mercosul) que tem validade de 2 anos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quais são os documentos básicos necessários (originais do Brasil)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Para solicitar a residência, você precisará providenciar no Brasil: Cédula de Identidade (RG) ou Passaporte, Certidão de Nascimento ou Casamento, Certidão de Antecedentes Criminais da Polícia Federal e da Polícia Civil. Importante: Todos os documentos brasileiros devem ser Apostilados (Apostila de Haia) em cartório no Brasil."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quais documentos devem ser feitos já em território paraguaio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ao chegar no Paraguai, você precisará obter: Certificado de Antecedentes para Estrangeiros (Interpol), Certificado de Antecedentes Policiais e Judiciais, Certificado Sanitário (exame médico), e Comprovante de Entrada no País."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso pular a residência temporária e ir direto para a Permanente?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sob a nova lei (6.984/2022), a regra geral é que o estrangeiro deve cumprir o período de Residência Temporária de 2 anos antes de solicitar a Admissão Permanente, salvo exceções para investidores, cientistas ou familiares de paraguaios."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O que é a Cédula de Identidade Paraguaia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Cédula de Identidade Civil é o documento emitido pelo Departamento de Identificações da Polícia Nacional. Você só pode solicitá-la após ter seu Carnê de Admissão Temporária ou Permanente emitido pelas Migrações."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como funciona a comprovação de solvência econômica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Para a residência temporária, a exigência foi simplificada. Para a permanente, o solicitante deve demonstrar meios de subsistência através de depósito bancário, título de propriedade rural ou urbana, ou contrato de trabalho."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Preciso de um advogado ou gestor para fazer o processo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não é obrigatório, mas é recomendável. Devido às exigências de traduções, autenticações e agendamentos, muitos portugueses e brasileiros optam por contratar assessorias especializadas para evitar erros na documentação."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Onde posso obter informações oficiais atualizadas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sempre consulte os canais oficiais do governo paraguaio: www.migraciones.gov.py ou no endereço Sede: Caballero esq. Eligio Ayala, Assunção, Paraguai."
+              }
+            }
+          ]
         }
-    </style>
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "name": "Breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Hero/Home", "item": "https://lv-gestoria.github.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Why Paraguay? PT", "item": "https://lv-gestoria.github.io/#why-py-pt" },
+          { "@type": "ListItem", "position": 3, "name": "Introduction PT", "item": "https://lv-gestoria.github.io/#pt" },
+          { "@type": "ListItem", "position": 4, "name": "Services PT", "item": "https://lv-gestoria.github.io/#services-pt" },
+          { "@type": "ListItem", "position": 5, "name": "Call to action / Contact PT", "item": "https://lv-gestoria.github.io/#contact-pt" },
+          { "@type": "ListItem", "position": 6, "name": "About Us", "item": "https://lv-gestoria.github.io/#sobre-nos" },
+          { "@type": "ListItem", "position": 7, "name": "Why Paraguay? ES", "item": "https://lv-gestoria.github.io/#why-py-es" },
+          { "@type": "ListItem", "position": 8, "name": "Introduction ES", "item": "https://lv-gestoria.github.io/#es" },
+          { "@type": "ListItem", "position": 9, "name": "Services ES", "item": "https://lv-gestoria.github.io/#services-es" },
+          { "@type": "ListItem", "position": 10, "name": "Call to action / Contact ES", "item": "https://lv-gestoria.github.io/#contact-es" },
+          { "@type": "ListItem", "position": 11, "name": "Location / Map Section", "item": "https://lv-gestoria.github.io/#map" },
+          { "@type": "ListItem", "position": 12, "name": "FAQ", "item": "https://lv-gestoria.github.io/#faq" }
+        ]
+      }
+    ]
+  </script>
 </head>
+
 <body class="text-gray-900 leading-relaxed">
+  <!-- Hidden Breadcrumbs for AEO/SEO -->
+  <nav aria-label="breadcrumb" class="sr-only">
+    <ol>
+      <li><a href="https://lv-gestoria.github.io/">Hero/Home</a></li>
+      <li><a href="https://lv-gestoria.github.io/#why-py-pt">Why Paraguay? PT</a></li>
+      <li><a href="https://lv-gestoria.github.io/#pt">Introduction PT</a></li>
+      <li><a href="https://lv-gestoria.github.io/#services-pt">Services PT</a></li>
+      <li><a href="https://lv-gestoria.github.io/#contact-pt">Call to action / Contact PT</a></li>
+      <li><a href="https://lv-gestoria.github.io/#sobre-nos">About Us</a></li>
+      <li><a href="https://lv-gestoria.github.io/#why-py-es">Why Paraguay? ES</a></li>
+      <li><a href="https://lv-gestoria.github.io/#es">Introduction ES</a></li>
+      <li><a href="https://lv-gestoria.github.io/#services-es">Services ES</a></li>
+      <li><a href="https://lv-gestoria.github.io/#contact-es">Call to action / Contact ES</a></li>
+      <li><a href="https://lv-gestoria.github.io/#map">Location / Map Section</a></li>
+      <li><a href="https://lv-gestoria.github.io/#faq">FAQ</a></li>
+    </ol>
+  </nav>
 
-    <nav class="fixed top-0 w-full z-50 py-4 px-6 flex justify-end space-x-4 text-xs tracking-widest font-bold bg-white/80 backdrop-blur-sm">
-        <a href="#pt" class="hover:text-amber-700 transition">PT</a>
-        <span class="text-gray-300">|</span>
-        <a href="#es" class="hover:text-amber-700 transition">ES</a>
-    </nav>
+  <!-- Navbar -->
+  <nav
+    class="fixed top-0 w-full z-50 py-4 px-6 flex justify-end space-x-4 text-xs tracking-widest font-bold bg-white/80 backdrop-blur-sm">
+    <a href="#pt" class="hover:text-amber-700 transition">PT</a>
+    <span class="text-gray-300">|</span>
+    <a href="#es" class="hover:text-amber-700 transition">ES</a>
+  </nav>
 
-    <header class="pt-24 pb-12">
-        <div class="logo-container" role="banner">
-            <div class="logo-image-wrapper">
-                <img src="villalba_logo-removebg.png" 
-                     alt="LV Gestão e Assessoria Logo" 
-                     class="main-logo"
-                     loading="eager">
-            </div>
-            <h1 class="business-title">Gestão e Assessoria</h1>
-            <p class="tagline">Assessoria Migratória de Alto Padrão</p>
-        </div>
-    </header>
+  <!-- Hero Section -->
+  <header class="pt-24 pb-12">
+    <div class="logo-container" role="banner">
+      <div class="logo-image-wrapper">
+        <img src="https://lv-gestoria.github.io/villalba_logo-removebg.png" alt="LV Gestão e Assessoria Logo"
+          class="main-logo" loading="eager">
+      </div>
+      <h1 class="business-title">Gestão e Assessoria</h1>
+      <p class="tagline">Assessoria Migratória de Alto Padrão</p>
+    </div>
+  </header>
 
-    <!-- Nova seção: Por que o Paraguai? -->
-    <section class="max-w-5xl mx-auto px-6 py-16 bg-white/40 backdrop-blur-sm rounded-xl shadow-sm">
-        <h2 class="text-3xl md:text-4xl text-center mb-10 gold-accent italic">Por que escolher o Paraguai?</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center md:text-left">
-            <div class="benefit-item space-y-2">
-                <h4 class="font-bold text-lg">Tributação territorial inteligente</h4>
-                <p class="text-gray-700 text-sm">0% de imposto sobre renda gerada no exterior. Ideal para nômades digitais, investidores e empreendedores.</p>
-            </div>
-            <div class="benefit-item space-y-2">
-                <h4 class="font-bold text-lg">Custo de vida acessível</h4>
-                <p class="text-gray-700 text-sm">Vida confortável com 30–50% menos custo que grandes cidades brasileiras, mantendo qualidade e segurança.</p>
-            </div>
-            <div class="benefit-item space-y-2">
-                <h4 class="font-bold text-lg">Estabilidade e oportunidades</h4>
-                <p class="text-gray-700 text-sm">País em crescimento constante, com facilidades para abrir empresas, investir e construir um futuro sólido.</p>
-            </div>
-            <div class="benefit-item space-y-2">
-                <h4 class="font-bold text-lg">Caminho rápido para cidadania</h4>
-                <p class="text-gray-700 text-sm">Residência permanente como ponte para cidadania paraguaia em poucos anos.</p>
-            </div>
-            <div class="benefit-item space-y-2">
-                <h4 class="font-bold text-lg">Facilidade bancária e liberdade</h4>
-                <p class="text-gray-700 text-sm">Abertura de contas em dólar, operações internacionais simplificadas e plenos direitos como residente.</p>
-            </div>
-            <div class="benefit-item space-y-2">
-                <h4 class="font-bold text-lg">Proximidade e adaptação fácil</h4>
-                <p class="text-gray-700 text-sm">Cultura próxima ao Brasil, comunidade brasileira crescente e processo migratório ágil.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Section: Why Paraguay? PT -->
+  <section id="why-py-pt" class="max-w-5xl mx-auto px-6 py-16 bg-white/40 backdrop-blur-sm rounded-xl shadow-sm">
+    <h2 class="text-3xl md:text-4xl text-center mb-10 gold-accent italic">Por que escolher o Paraguai?</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center md:text-left">
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Tributação territorial inteligente</h3>
+        <p class="text-gray-700 text-sm">0% de imposto sobre renda gerada no exterior. Ideal para nômades digitais,
+          investidores e empreendedores.</p>
+      </div>
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Custo de vida acessível</h3>
+        <p class="text-gray-700 text-sm">Vida confortável com 30–50% menos custo que grandes cidades brasileiras,
+          mantendo qualidade e segurança.</p>
+      </div>
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Estabilidade e oportunidades</h3>
+        <p class="text-gray-700 text-sm">País em crescimento constante, com facilidades para abrir empresas, investir e
+          construir um futuro sólido.</p>
+      </div>
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Caminho rápido para cidadania</h3>
+        <p class="text-gray-700 text-sm">Residência permanente como ponte para cidadania paraguaia em poucos anos.</p>
+      </div>
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Facilidade bancária e liberdade</h3>
+        <p class="text-gray-700 text-sm">Abertura de contas em dólar, operações internacionais simplificadas e plenos
+          direitos como residente.</p>
+      </div>
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Proximidade e adaptação fácil</h3>
+        <p class="text-gray-700 text-sm">Cultura próxima ao Brasil, comunidade brasileira crescente e processo
+          migratório ágil.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="pt" class="max-w-4xl mx-auto px-6 py-16 text-center border-y border-gray-100">
-        <div class="mb-12">
-            <h2 class="text-3xl md:text-5xl italic mb-6">Sua residência no Paraguai com exclusividade e segurança.</h2>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-                Sonha em viver e prosperar no Paraguai? O primeiro passo para muitos é a obtenção da Residência Temporária ou Permanente. Na LV Gestão e Assessoria, guiamos você por todo o processo com clareza, eficiência e total conformidade legal.
-            </p>
-            <p class="text-gray-500 uppercase tracking-widest text-sm">Especialistas em Documentação Estrangeira</p>
-        </div>
-    </section>
+  <!-- Section: Introduction PT -->
+  <section id="pt" class="max-w-4xl mx-auto px-6 py-16 text-center border-y border-gray-100">
+    <div class="mb-12">
+      <h2 class="text-3xl md:text-5xl italic mb-6">Sua residência no Paraguai com exclusividade e segurança.</h2>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+        Sonha em viver e prosperar no Paraguai? O primeiro passo para muitos é a obtenção da Residência Temporária ou
+        Permanente. Na LV Gestão e Assessoria, guiamos você por todo o processo com clareza, eficiência e total
+        conformidade legal.
+      </p>
+      <p class="text-gray-500 uppercase tracking-widest text-sm">Especialistas em Documentação Estrangeira</p>
+    </div>
+  </section>
 
-    <!-- Cards de serviços (mantidos originais) -->
-    <section class="max-w-5xl mx-auto px-6 py-20">
-        <h2 class="text-3xl text-center mb-12 italic gold-accent">Nossos Serviços</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
-                <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-4">Admissão Permanente</h3>
-                <p class="text-gray-600 text-sm">Conquiste a Residência Permanente com suporte completo — estabilidade, segurança e portas abertas para investir e prosperar.</p>
-                <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
-            </div>
-            <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
-                <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-4">Cédula Paraguaia</h3>
-                <p class="text-gray-600 text-sm">Mais que um documento: sua chave para integração plena, contas bancárias, serviços e tranquilidade legal.</p>
-                <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
-            </div>
-            <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
-                <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-4">Registro de Estrangeiro & Interpol</h3>
-                <p class="text-gray-600 text-sm">Documentação completa e segura para sua regularização junto às autoridades.</p>
-                <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
-            </div>
-            <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
-                <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-4">Antecedentes Judiciais & Radicação</h3>
-                <p class="text-gray-600 text-sm">Cuidamos de certidões e trâmites para agilizar sua radicação sem complicações.</p>
-                <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
-            </div>
-            <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
-                <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-4">Gestão de Cartório</h3>
-                <p class="text-gray-600 text-sm">Procuradoria e gestão documental completa para que você foque no que importa: sua nova vida.</p>
-                <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
-            </div>
-            <div class="bg-black text-white p-8 rounded-sm text-center flex flex-col justify-center">
-                <p class="text-xs tracking-[0.3em] uppercase mb-4 opacity-70">Contato Direto</p>
-                <a href="https://wa.me/595983509507?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20no%20Paraguai." class="hover:text-amber-500 transition underline underline-offset-8 text-lg">Solicitar Consultoria</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nova seção: Nosso Compromisso / Chamada final em PT -->
-    <section class="max-w-4xl mx-auto px-6 py-20 text-center bg-stone-50/70">
-        <h2 class="text-3xl md:text-4xl italic mb-8 gold-accent">Conquiste seu futuro no Paraguai com segurança</h2>
-        <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">
-            Na LV Gestão e Assessoria, compreendemos a importância deste passo e estamos dedicados a tornar seu processo suave, eficiente e sem preocupações. Nossa expertise garante que cada etapa seja conduzida com máxima precisão e conformidade. Permita-nos ser seu guia nessa jornada.
+  <!-- Section: Services PT -->
+  <section id="services-pt" class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="text-3xl text-center mb-12 italic gold-accent">Nossos Serviços</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
+        <span class="gold-accent text-2xl mb-4 block">✧</span>
+        <h3 class="text-xl mb-4">Admissão Permanente</h3>
+        <p class="text-gray-600 text-sm">Conquiste a Residência Permanente com suporte completo — estabilidade,
+          segurança e portas abertas para investir e prosperar.</p>
+        <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
+      </div>
+      <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
+        <span class="gold-accent text-2xl mb-4 block">✧</span>
+        <h3 class="text-xl mb-4">Cédula Paraguaia</h3>
+        <p class="text-gray-600 text-sm">Mais que um documento: sua chave para integração plena, contas bancárias,
+          serviços e tranquilidade legal.</p>
+        <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
+      </div>
+      <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
+        <span class="gold-accent text-2xl mb-4 block">✧</span>
+        <h3 class="text-xl mb-4">Registro de Estrangeiro & Interpol</h3>
+        <p class="text-gray-600 text-sm">Documentação completa e segura para sua regularização junto às autoridades.</p>
+        <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
+      </div>
+      <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
+        <span class="gold-accent text-2xl mb-4 block">✧</span>
+        <h3 class="text-xl mb-4">Antecedentes Judiciais & Radicação</h3>
+        <p class="text-gray-600 text-sm">Cuidamos de certidões e trâmites para agilizar sua radicação sem complicações.
         </p>
-        <a href="https://wa.me/595983509507?text=Quero%20dar%20o%20primeiro%20passo%20para%20minha%20residência%20no%20Paraguai" class="inline-block bg-gold text-white font-bold py-4 px-10 rounded hover:bg-black transition text-lg">
-            Fale conosco agora
-        </a>
-    </section>
+        <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
+      </div>
+      <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
+        <span class="gold-accent text-2xl mb-4 block">✧</span>
+        <h3 class="text-xl mb-4">Gestão de Cartório</h3>
+        <p class="text-gray-600 text-sm">Procuradoria e gestão documental completa para que você foque no que importa:
+          sua nova vida.</p>
+        <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
+      </div>
+      <div class="bg-black text-white p-8 rounded-sm text-center flex flex-col justify-center">
+        <p class="text-xs tracking-[0.3em] uppercase mb-4 opacity-70">Contato Direto</p>
+        <a href="https://wa.me/595983509507?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20no%20Paraguai."
+          class="hover:text-amber-500 transition underline underline-offset-8 text-lg">Solicitar Consultoria</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="es" class="max-w-4xl mx-auto px-6 py-16 text-center border-y border-gray-100 bg-stone-50/50">
-        <div>
-            <h2 class="text-3xl md:text-5xl italic mb-6">Su residencia en Paraguay con exclusividad y seguridad.</h2>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-                ¿Sueñas con vivir y prosperar en Paraguay? El primer paso para muchos es obtener la Residencia Temporal o Permanente. En LV Gestión y Asesoría te acompañamos en todo el proceso con claridad, eficiencia y plena conformidad legal.
-            </p>
-            <p class="text-gray-500 uppercase tracking-widest text-sm">Asesoría Migratoria de Alto Nivel</p>
-        </div>
-    </section>
+  <!-- Section: Call to action / Contact PT -->
+  <section id="contact-pt" class="max-w-4xl mx-auto px-6 py-20 text-center bg-stone-50/70">
+    <h2 class="text-3xl md:text-4xl italic mb-8 gold-accent">Conquiste seu futuro no Paraguai com segurança</h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">
+      Na LV Gestão e Assessoria, compreendemos a importância deste passo e estamos dedicados a tornar seu processo
+      suave, eficiente e sem preocupações. Nossa expertise garante que cada etapa seja conduzida com máxima precisão e
+      conformidade. Permita-nos ser seu guia nessa jornada.
+    </p>
+    <h3 class="text-xl md:text-2xl font-bold mb-6 text-gray-800">Fale conosco agora</h3>
+    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+      <a href="https://wa.me/595983509507?text=Quero%20dar%20o%20primeiro%20passo%20para%20minha%20residência%20no%20Paraguai"
+        class="inline-block bg-gold text-white font-bold py-3 px-8 rounded hover:bg-black transition text-lg w-full sm:w-auto">
+        WhatsApp
+      </a>
+      <a href="https://instagram.com/leonoravillalba_py"
+        class="inline-block bg-black text-white font-bold py-3 px-8 rounded hover:bg-gray-800 transition text-lg w-full sm:w-auto">
+        Instagram
+      </a>
+    </div>
+  </section>
 
-    <section class="max-w-5xl mx-auto px-6 py-20">
-        <h2 class="text-3xl text-center mb-12 italic gold-accent">Nuestros Servicios</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
-                <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-4">Admisión Permanente</h3>
-                <p class="text-gray-600 text-sm">Obtén la Residencia Permanente con soporte completo — estabilidad, seguridad y acceso a nuevas oportunidades.</p>
-                <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
-            </div>
-            <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
-                <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-4">Cédula Paraguaya</h3>
-                <p class="text-gray-600 text-sm">Más que un documento: tu clave para integración plena, banca, servicios y tranquilidad legal.</p>
-                <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
-            </div>
-            <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
-                <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-4">Registro de Extranjero & Interpol</h3>
-                <p class="text-gray-600 text-sm">Documentación completa y segura ante las autoridades.</p>
-                <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
-            </div>
-            <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
-                <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-4">Antecedentes Judiciales & Radicación</h3>
-                <p class="text-gray-600 text-sm">Gestionamos certificados y trámites para acelerar tu radicación sin complicaciones.</p>
-                <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
-            </div>
-            <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
-                <span class="gold-accent text-2xl mb-4 block">✧</span>
-                <h3 class="text-xl mb-4">Procuración Notarial</h3>
-                <p class="text-gray-600 text-sm">Poderes y gestión documental para que te enfoques en tu nueva vida.</p>
-                <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
-            </div>
-            <div class="bg-black text-white p-8 rounded-sm text-center flex flex-col justify-center">
-                <p class="text-xs tracking-[0.3em] uppercase mb-4 opacity-70">Contáctenos</p>
-                <a href="https://wa.me/595983509507?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20no%20Paraguai." class="hover:text-amber-500 transition underline underline-offset-8 text-lg">Solicitar Consultoría</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nova seção final em ES (similar) -->
-    <section class="max-w-4xl mx-auto px-6 py-20 text-center bg-stone-50/70">
-        <h2 class="text-3xl md:text-4xl italic mb-8 gold-accent">Conquista tu futuro en Paraguay con seguridad</h2>
-        <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">
-            En LV Gestión y Asesoría entendemos la importancia de este paso y estamos dedicados a hacer tu proceso fluido, eficiente y sin preocupaciones. Nuestra experiencia garantiza que cada etapa se realice con máxima precisión y cumplimiento. Permítenos ser tu guía en esta jornada.
+  <!-- Section: About Us -->
+  <section id="sobre-nos" class="max-w-5xl mx-auto px-6 py-10">
+    <div
+      class="bg-white p-8 md:p-12 rounded-sm shadow-sm border border-gray-100 hover:border-gold transition-colors flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-shrink-0">
+        <img src="https://lv-gestoria.github.io/leonora.jpg" alt="LV Gestão e Assessoria - Leonora Villalba"
+          class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-sm border border-gold" loading="lazy">
+      </div>
+      <div class="text-center md:text-left">
+        <h2 class="text-3xl italic mb-3 gold-accent">Leonora Villalba</h2>
+        <p class="text-gray-800 font-bold mb-4 uppercase tracking-wider text-sm">Especialista em Documentação
+          Estrangeira</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+          Na <strong>LV Gestão e Assessoria</strong>, guiamos nossos clientes com clareza em cada etapa do complexo
+          sistema oficial paraguaio de imigração. Garantimos assessoria completa e legal para a emissão da sua
+          <em>Residência</em> e <em>Cédula Paraguaia</em>. Nosso objetivo é garantir que seu processo seja transparente,
+          seguro e ágil, proporcionando total tranquilidade.
         </p>
-        <a href="https://wa.me/595983509507?text=Hola!%20Quiero%20saber%20más%20sobre%20la%20asesoría%20para%20residencia%20en%20Paraguay" class="inline-block bg-gold text-white font-bold py-4 px-10 rounded hover:bg-black transition text-lg">
-            Contáctanos ahora
-        </a>
-    </section>
-
-    <footer class="bg-stone-50 py-20 px-6 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="mb-10 space-y-2">
-                <p class="text-xs tracking-widest text-gray-400">RUC: 4413367-7</p>
-                <p class="text-sm font-bold uppercase">LV Gestão e Assessoria</p>
-            </div>
-
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 mb-12">
-                <a href="https://wa.me/595983509507?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20no%20Paraguai." class="flex items-center group">
-                    <span class="gold-accent mr-3 group-hover:scale-110 transition font-bold">WhatsApp</span>
-                </a>
-                <a href="https://instagram.com/leonoravillalba_py" class="flex items-center group">
-                    <span class="gold-accent mr-3 group-hover:scale-110 transition font-bold">Instagram</span>
-                </a>
-            </div>
-
-            <div class="text-[10px] uppercase tracking-widest text-gray-400">
-                © 2026 LV Gestão e Assessoria | Paraguay
-            </div>
+        <div
+          class="mt-6 flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-xs font-bold uppercase tracking-widest text-gray-500">
+          <span class="flex items-center gap-2"><span class="gold-accent text-lg leading-none">✧</span> Especialista em
+            Migrações</span>
+          <span class="flex items-center gap-2"><span class="gold-accent text-lg leading-none">✧</span> Processos
+            Transparentes</span>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <a href="https://wa.me/595983509507?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20no%20Paraguai." class="fixed bottom-8 right-8 bg-gold text-white p-4 rounded-full shadow-xl hover:bg-black hover:scale-110 transition-all z-50" aria-label="Chat on WhatsApp">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835l.398.236c1.162.687 2.51 1.05 3.899 1.051 4.79 0 8.686-3.896 8.688-8.688.001-2.323-.902-4.506-2.541-6.146s-3.824-2.541-6.147-2.541c-4.791 0-8.686 3.896-8.688 8.688-.001 1.517.391 2.997 1.135 4.296l.259.452-1.1 4.02 4.116-1.08z"/></svg>
-    </a>
+  <!-- Section: Why Paraguay? ES -->
+  <section id="why-py-es" class="max-w-5xl mx-auto px-6 py-16 bg-white/40 backdrop-blur-sm rounded-xl shadow-sm">
+    <h2 class="text-3xl md:text-4xl text-center mb-10 gold-accent italic">¿Por qué elegir Paraguay?</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center md:text-left">
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Tributación territorial inteligente</h3>
+        <p class="text-gray-700 text-sm">0% de impuestos sobre ingresos generados en el exterior. Ideal para nómadas
+          digitales, inversores y emprendedores.</p>
+      </div>
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Costo de vida accesible</h3>
+        <p class="text-gray-700 text-sm">Vida confortable con 30–50% menos costo que en grandes ciudades regionales,
+          manteniendo calidad y seguridad.</p>
+      </div>
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Estabilidad y oportunidades</h3>
+        <p class="text-gray-700 text-sm">País en constante crecimiento, con facilidades para abrir empresas, invertir y
+          construir un futuro sólido.</p>
+      </div>
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Camino rápido a la ciudadanía</h3>
+        <p class="text-gray-700 text-sm">Residencia permanente como puente para la ciudadanía paraguaya en pocos años.
+        </p>
+      </div>
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Facilidad bancaria y libertad</h3>
+        <p class="text-gray-700 text-sm">Apertura de cuentas en dólares, operaciones internacionales simplificadas y
+          plenos derechos como residente.</p>
+      </div>
+      <div class="benefit-item space-y-2">
+        <h3 class="font-bold text-lg">Proximidad y fácil adaptación</h3>
+        <p class="text-gray-700 text-sm">Cultura cálida y acogedora, comunidad extranjera en crecimiento y proceso
+          migratorio ágil.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Introduction ES -->
+  <section id="es" class="max-w-4xl mx-auto px-6 py-16 text-center border-y border-gray-100 bg-stone-50/50">
+    <div>
+      <h2 class="text-3xl md:text-5xl italic mb-6">Su residencia en Paraguay con exclusividad y seguridad.</h2>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+        ¿Sueñas con vivir y prosperar en Paraguay? El primer paso para muchos es obtener la Residencia Temporal o
+        Permanente. En LV Gestión y Asesoría te acompañamos en todo el proceso con claridad, eficiencia y plena
+        conformidad legal.
+      </p>
+      <p class="text-gray-500 uppercase tracking-widest text-sm">Asesoría Migratoria de Alto Nivel</p>
+    </div>
+  </section>
+
+  <!-- Section: Services ES -->
+  <section id="services-es" class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="text-3xl text-center mb-12 italic gold-accent">Nuestros Servicios</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
+        <span class="gold-accent text-2xl mb-4 block">✧</span>
+        <h3 class="text-xl mb-4">Admisión Permanente</h3>
+        <p class="text-gray-600 text-sm">Obtén la Residencia Permanente con soporte completo — estabilidad, seguridad y
+          acceso a nuevas oportunidades.</p>
+        <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
+      </div>
+      <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
+        <span class="gold-accent text-2xl mb-4 block">✧</span>
+        <h3 class="text-xl mb-4">Cédula Paraguaya</h3>
+        <p class="text-gray-600 text-sm">Más que un documento: tu clave para integración plena, banca, servicios y
+          tranquilidad legal.</p>
+        <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
+      </div>
+      <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
+        <span class="gold-accent text-2xl mb-4 block">✧</span>
+        <h3 class="text-xl mb-4">Registro de Extranjero & Interpol</h3>
+        <p class="text-gray-600 text-sm">Documentación completa y segura ante las autoridades.</p>
+        <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
+      </div>
+      <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
+        <span class="gold-accent text-2xl mb-4 block">✧</span>
+        <h3 class="text-xl mb-4">Antecedentes Judiciales & Radicación</h3>
+        <p class="text-gray-600 text-sm">Gestionamos certificados y trámites para acelerar tu radicación sin
+          complicaciones.</p>
+        <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
+      </div>
+      <div class="service-card p-8 border border-gray-100 shadow-sm rounded-sm text-center">
+        <span class="gold-accent text-2xl mb-4 block">✧</span>
+        <h3 class="text-xl mb-4">Procuración Notarial</h3>
+        <p class="text-gray-600 text-sm">Poderes y gestión documental para que te enfoques en tu nueva vida.</p>
+        <div class="w-8 h-[1px] bg-gold mx-auto mt-6"></div>
+      </div>
+      <div class="bg-black text-white p-8 rounded-sm text-center flex flex-col justify-center">
+        <p class="text-xs tracking-[0.3em] uppercase mb-4 opacity-70">Contáctenos</p>
+        <a href="https://wa.me/595983509507?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20no%20Paraguai."
+          class="hover:text-amber-500 transition underline underline-offset-8 text-lg">Solicitar Consultoría</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Call to action / Contact ES -->
+  <section id="contact-es" class="max-w-4xl mx-auto px-6 py-20 text-center bg-stone-50/70">
+    <h2 class="text-3xl md:text-4xl italic mb-8 gold-accent">Conquista tu futuro en Paraguay con seguridad</h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">
+      En LV Gestión y Asesoría entendemos la importancia de este paso y estamos dedicados a hacer tu proceso fluido,
+      eficiente y sin preocupaciones. Nuestra experiencia garantiza que cada etapa se realice con máxima precisión y
+      cumplimiento. Permítenos ser tu guía en esta jornada.
+    </p>
+    <h3 class="text-xl md:text-2xl font-bold mb-6 text-gray-800">Contáctanos ahora</h3>
+    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+      <a href="https://wa.me/595983509507?text=Hola!%20Quiero%20saber%20más%20sobre%20la%20asesoría%20para%20residencia%20en%20Paraguay"
+        class="inline-block bg-gold text-white font-bold py-3 px-8 rounded hover:bg-black transition text-lg w-full sm:w-auto">
+        WhatsApp
+      </a>
+      <a href="https://instagram.com/leonoravillalba_py"
+        class="inline-block bg-black text-white font-bold py-3 px-8 rounded hover:bg-gray-800 transition text-lg w-full sm:w-auto">
+        Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- Location / Map Section -->
+  <section id="map" class="max-w-5xl mx-auto px-6 py-10">
+    <div class="rounded-sm overflow-hidden shadow-sm border border-gray-100 mx-auto w-full">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d898.0002616650683!2d-55.08970898947212!3d-25.80353954308507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2spy!4v1776032497426!5m2!1sen!2spy"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+
+  <!-- FAQ Section -->
+  <section id="faq" class="max-w-4xl mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl italic mb-12 text-center gold-accent">FAQ - Perguntas Frequentes</h2>
+    <div class="space-y-6">
+
+      <!-- FAQ Item 1 -->
+      <details class="bg-white rounded-sm shadow-sm border border-gray-100 hover:border-gold transition-colors group">
+        <summary
+          class="p-6 text-xl font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+          Brasileiro precisa de visto para entrar no Paraguai?
+          <span class="text-gold transition-transform group-open:rotate-180">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewBox="0 0 24 24" width="24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 pt-2">
+          <p class="text-gray-700 text-sm leading-relaxed"><strong>Não.</strong> Como o Brasil e o Paraguai são
+            estados-membros do Mercosul, brasileiros podem entrar no país apenas com o <strong>RG original</strong> (em
+            bom estado e com foto atualizada) ou <strong>Passaporte válido</strong>. Não é necessário visto de turista
+            para estadias de até 90 dias.</p>
+        </div>
+      </details>
+
+      <!-- FAQ Item 2 -->
+      <details class="bg-white rounded-sm shadow-sm border border-gray-100 hover:border-gold transition-colors group">
+        <summary
+          class="p-6 text-xl font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+          Qual é o primeiro passo para quem quer morar legalmente?
+          <span class="text-gold transition-transform group-open:rotate-180">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewBox="0 0 24 24" width="24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 pt-2">
+          <p class="text-gray-700 text-sm leading-relaxed">Desde a nova lei de 2022, o processo geralmente começa com a
+            <strong>Residência Temporária (Acordo Mercosul)</strong>.
+          </p>
+          <ul class="list-disc pl-5 mt-2 text-gray-700 text-sm space-y-1">
+            <li><strong>Validade:</strong> 2 anos.</li>
+            <li><strong>Objetivo:</strong> Permite trabalhar, estudar e abrir conta bancária enquanto você estabelece
+              raízes para solicitar a residência definitiva.</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- FAQ Item 3 -->
+      <details class="bg-white rounded-sm shadow-sm border border-gray-100 hover:border-gold transition-colors group">
+        <summary
+          class="p-6 text-xl font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+          Quais são os documentos básicos necessários (originais do Brasil)?
+          <span class="text-gold transition-transform group-open:rotate-180">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewBox="0 0 24 24" width="24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 pt-2">
+          <p class="text-gray-700 text-sm leading-relaxed">Para solicitar a residência, você precisará providenciar no
+            Brasil:</p>
+          <ol class="list-decimal pl-5 mt-2 text-gray-700 text-sm space-y-1">
+            <li><strong>Cédula de Identidade (RG)</strong> ou Passaporte.</li>
+            <li><strong>Certidão de Nascimento</strong> ou Casamento (para comprovar filiação).</li>
+            <li><strong>Certidão de Antecedentes Criminais</strong> da Polícia Federal.</li>
+            <li><strong>Certidão de Antecedentes Criminais</strong> da Polícia Civil do seu estado.</li>
+          </ol>
+          <div class="mt-4 p-4 bg-amber-50 border-l-4 border-gold text-sm text-gray-800">
+            <strong>Importante:</strong> Todos os documentos brasileiros devem ser <strong>Apostilados (Apostila de
+              Haia)</strong> em cartório no Brasil para terem validade legal no Paraguai.
+          </div>
+        </div>
+      </details>
+
+      <!-- FAQ Item 4 -->
+      <details class="bg-white rounded-sm shadow-sm border border-gray-100 hover:border-gold transition-colors group">
+        <summary
+          class="p-6 text-xl font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+          Quais documentos devem ser feitos já em território paraguaio?
+          <span class="text-gold transition-transform group-open:rotate-180">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewBox="0 0 24 24" width="24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 pt-2">
+          <p class="text-gray-700 text-sm leading-relaxed">Ao chegar no Paraguai, você precisará obter:</p>
+          <ol class="list-decimal pl-5 mt-2 text-gray-700 text-sm space-y-1">
+            <li><strong>Certificado de Antecedentes para Estrangeiros</strong> (Interpol Paraguai).</li>
+            <li><strong>Certificado de Antecedentes Policiais e Judiciais</strong> (Polícia Nacional do Paraguai).</li>
+            <li><strong>Certificado Sanitário</strong> (exame médico realizado no Paraguai).</li>
+            <li><strong>Comprovante de Entrada no País</strong> (carimbo de migrações ou ticket de entrada).</li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- FAQ Item 5 -->
+      <details class="bg-white rounded-sm shadow-sm border border-gray-100 hover:border-gold transition-colors group">
+        <summary
+          class="p-6 text-xl font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+          Posso pular a residência temporária e ir direto para a Permanente?
+          <span class="text-gold transition-transform group-open:rotate-180">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewBox="0 0 24 24" width="24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 pt-2">
+          <p class="text-gray-700 text-sm leading-relaxed">Sob a nova lei (6.984/2022), a regra geral é que o
+            estrangeiro deve cumprir o período de <strong>Residência Temporária de 2 anos</strong> antes de solicitar a
+            Admissão Permanente.</p>
+          <p class="text-gray-700 text-sm leading-relaxed mt-2"><em>Exceções:</em> Investidores (via programa SUACE),
+            cientistas, acadêmicos ou familiares diretos de paraguaios podem, em certos casos, solicitar a permanente de
+            forma direta.</p>
+        </div>
+      </details>
+
+      <!-- FAQ Item 6 -->
+      <details class="bg-white rounded-sm shadow-sm border border-gray-100 hover:border-gold transition-colors group">
+        <summary
+          class="p-6 text-xl font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+          O que é a Cédula de Identidade Paraguaia?
+          <span class="text-gold transition-transform group-open:rotate-180">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewBox="0 0 24 24" width="24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 pt-2">
+          <p class="text-gray-700 text-sm leading-relaxed">A <strong>Cédula de Identidade Civil</strong> é o documento
+            emitido pelo Departamento de Identificações da Polícia Nacional.</p>
+          <ul class="list-disc pl-5 mt-2 text-gray-700 text-sm space-y-1">
+            <li>Você só pode solicitá-la <strong>após</strong> ter em mãos o seu Carnê de Admissão Temporária ou
+              Permanente emitido pelas Migrações.</li>
+            <li>É com a Cédula que você terá um número de identificação oficial no país, facilitando contratos e vida
+              financeira.</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- FAQ Item 7 -->
+      <details class="bg-white rounded-sm shadow-sm border border-gray-100 hover:border-gold transition-colors group">
+        <summary
+          class="p-6 text-xl font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+          Como funciona a comprovação de solvência econômica?
+          <span class="text-gold transition-transform group-open:rotate-180">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewBox="0 0 24 24" width="24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 pt-2">
+          <p class="text-gray-700 text-sm leading-relaxed">Para a residência temporária via Mercosul, a exigência de
+            comprovação de renda foi simplificada. No entanto, para a residência <strong>permanente</strong>, o
+            solicitante deve demonstrar que possui meios de subsistência, o que pode ser feito através de:</p>
+          <ul class="list-disc pl-5 mt-2 text-gray-700 text-sm space-y-1">
+            <li>Depósito bancário (valor equivalente a cerca de 25-30 salários mínimos paraguaios, devolvido após a
+              conclusão do processo).</li>
+            <li>Título de propriedade rural ou urbana.</li>
+            <li>Contrato de trabalho ou comprovante de exercício de profissão liberal.</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- FAQ Item 8 -->
+      <details class="bg-white rounded-sm shadow-sm border border-gray-100 hover:border-gold transition-colors group">
+        <summary
+          class="p-6 text-xl font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+          Preciso de um advogado ou gestor para fazer o processo?
+          <span class="text-gold transition-transform group-open:rotate-180">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewBox="0 0 24 24" width="24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 pt-2">
+          <p class="text-gray-700 text-sm leading-relaxed"><strong>Não é obrigatório, mas é recomendável.</strong> O
+            processo pode ser feito pessoalmente na sede da <em>Migraciones</em> em Assunção ou em escritórios regionais
+            (como Ciudad del Este ou Pedro Juan Caballero). No entanto, devido às exigências de traduções, autenticações
+            e agendamentos, muitos brasileiros optam por contratar assessorias especializadas para evitar erros na
+            documentação.</p>
+        </div>
+      </details>
+
+      <!-- FAQ Item 9 -->
+      <details class="bg-white rounded-sm shadow-sm border border-gray-100 hover:border-gold transition-colors group">
+        <summary
+          class="p-6 text-xl font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+          Onde posso obter informações oficiais atualizadas?
+          <span class="text-gold transition-transform group-open:rotate-180">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewBox="0 0 24 24" width="24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 pt-2">
+          <p class="text-gray-700 text-sm leading-relaxed">Sempre consulte os canais oficiais do governo paraguaio:</p>
+          <ul class="list-disc pl-5 mt-2 text-gray-700 text-sm space-y-1">
+            <li><strong>Site Oficial:</strong> <a href="https://www.migraciones.gov.py" target="_blank"
+                rel="noopener noreferrer" class="text-amber-700 hover:underline">www.migraciones.gov.py</a></li>
+            <li><strong>Endereço (Sede):</strong> Caballero esq. Eligio Ayala, Assunção, Paraguai.</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- FAQ Warnings -->
+      <details class="bg-red-50 rounded-sm shadow-sm border border-red-200 mt-8 group">
+        <summary
+          class="p-6 text-xl font-bold text-red-800 cursor-pointer list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+          ⚠️ Lembretes Importantes para Brasileiros
+          <span class="text-red-800 transition-transform group-open:rotate-180">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewBox="0 0 24 24" width="24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 pt-2">
+          <ul class="list-disc pl-5 text-red-700 text-sm space-y-2">
+            <li><strong>Vacina da Febre Amarela:</strong> É obrigatório apresentar o Certificado Internacional de
+              Vacinação para entrar e sair do Paraguai se você vier de áreas de risco ou para fins de trâmites.</li>
+            <li><strong>Apostila de Haia:</strong> Nunca viaje para o Paraguai com o intuito de morar sem antes ter
+              apostilado seus documentos no Brasil. O consulado brasileiro no Paraguai <strong>não</strong> pode
+              apostilar documentos emitidos no Brasil.</li>
+          </ul>
+        </div>
+      </details>
+
+      <p class="text-xs text-gray-400 text-center mt-6 italic">*Este FAQ tem caráter informativo e não substitui a
+        consulta direta às autoridades migratórias competentes.</p>
+    </div>
+  </section>
+
+  <footer class="bg-stone-50 py-20 px-6 border-t border-gray-200">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-10 space-y-2">
+        <p class="text-xs tracking-widest text-gray-400">RUC: 4413367-7</p>
+        <p class="text-sm font-bold uppercase">LV Gestão e Assessoria</p>
+      </div>
+
+
+
+      <div class="text-[10px] uppercase tracking-widest text-gray-400">
+        <p> © 2026 LV Gestão e Assessoria | Paraguay</p>
+        <a href="https://liberom.github.io/vynix-sys" target="_blank" rel="noopener noreferrer"
+          class="hover:text-blue-600 transition font-medium">Made by Vynix</a>
+      </div>
+
+
+    </div>
+  </footer>
+
+  <a href="https://wa.me/595983509507?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20para%20residência%20no%20Paraguai."
+    class="fixed bottom-8 right-8 bg-gold text-white p-4 rounded-full shadow-xl hover:bg-black hover:scale-110 transition-all z-50"
+    aria-label="Chat on WhatsApp">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835l.398.236c1.162.687 2.51 1.05 3.899 1.051 4.79 0 8.686-3.896 8.688-8.688.001-2.323-.902-4.506-2.541-6.146s-3.824-2.541-6.147-2.541c-4.791 0-8.686 3.896-8.688 8.688-.001 1.517.391 2.997 1.135 4.296l.259.452-1.1 4.02 4.116-1.08z" />
+    </svg>
+  </a>
 
 </body>
+
 </html>
