@@ -231,23 +231,63 @@
           "itemListElement": [
             {
               "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Admissão Permanente" }
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Residência Temporária Mercosul",
+                "description": "Processo de 2 anos baseado na nova lei 6.984/2022 para cidadãos do Mercosul.",
+                "provider": { "@id": "https://lv-gestoria.github.io/" },
+                "areaServed": { "@type": "Country", "name": "Paraguay" }
+              }
             },
             {
               "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Cédula Paraguaia" }
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Admissão Permanente",
+                "description": "Processo de obtenção de residência definitiva no Paraguai.",
+                "provider": { "@id": "https://lv-gestoria.github.io/" },
+                "areaServed": { "@type": "Country", "name": "Paraguay" }
+              }
             },
             {
               "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Registro de Estrangeiro & Interpol" }
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cédula Paraguaia",
+                "description": "Emissão da Cédula de Identidade paraguaia para estrangeiros residentes, permitindo abertura de contas bancárias e integração plena.",
+                "provider": { "@id": "https://lv-gestoria.github.io/" },
+                "areaServed": { "@type": "Country", "name": "Paraguay" }
+              }
             },
             {
               "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Antecedentes Judiciais & Radicação" }
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Registro de Estrangeiro & Interpol",
+                "description": "Obtenção do Certificado de Antecedentes para Estrangeiros na Interpol e demais registros obrigatórios.",
+                "provider": { "@id": "https://lv-gestoria.github.io/" },
+                "areaServed": { "@type": "Country", "name": "Paraguay" }
+              }
             },
             {
               "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Procuração Notarial e Gestão de Cartório" }
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Antecedentes Judiciais & Radicação",
+                "description": "Gestão completa de certidões de antecedentes policiais, judiciais e sanitários no Paraguai.",
+                "provider": { "@id": "https://lv-gestoria.github.io/" },
+                "areaServed": { "@type": "Country", "name": "Paraguay" }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Procuração Notarial e Gestão de Cartório",
+                "description": "Serviços de representação notarial e gestão de toda a documentação cartorária para trâmites migratórios.",
+                "provider": { "@id": "https://lv-gestoria.github.io/" },
+                "areaServed": { "@type": "Country", "name": "Paraguay" }
+              }
             }
           ]
         },
@@ -347,6 +387,25 @@
           { "@type": "ListItem", "position": 10, "name": "Call to action / Contact ES", "item": "https://lv-gestoria.github.io/#contact-es" },
           { "@type": "ListItem", "position": 11, "name": "Location / Map Section", "item": "https://lv-gestoria.github.io/#map" },
           { "@type": "ListItem", "position": 12, "name": "FAQ", "item": "https://lv-gestoria.github.io/#faq" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Como obter residência no Paraguai para brasileiros",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "text": "Preparar documentos no Brasil (RG, Certidões) e realizar o Apostilamento de Haia."
+          },
+          {
+            "@type": "HowToStep",
+            "text": "Entrar no Paraguai e obter antecedentes da Interpol e Policia Nacional."
+          },
+          {
+            "@type": "HowToStep",
+            "text": "Solicitar a Residência Temporária (Lei 6984/2022) junto às Migrações."
+          }
         ]
       }
     ]
@@ -514,7 +573,7 @@
     <div
       class="bg-white p-8 md:p-12 rounded-sm shadow-sm border border-gray-100 hover:border-gold transition-colors flex flex-col md:flex-row items-center gap-10">
       <div class="flex-shrink-0">
-        <img src="https://lv-gestoria.github.io/leonora.jpg" alt="LV Gestão e Assessoria - Leonora Villalba"
+        <img src="https://lv-gestoria.github.io/leonora.jpg" alt="Leonora Villalba especialista em migração Paraguai"
           class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-sm border border-gold" loading="lazy">
       </div>
       <div class="text-center md:text-left">
